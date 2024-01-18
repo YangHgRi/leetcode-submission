@@ -20,9 +20,6 @@ struct ListNode* mergeTwoLists(struct ListNode* list1, struct ListNode* list2) {
         }
         current = current->next;
     }
-
-    // 处理剩余的节点
     current->next = (list1 != NULL) ? list1 : list2;
-
     return dummy.next;
 }
